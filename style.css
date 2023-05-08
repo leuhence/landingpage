@@ -1,0 +1,170 @@
+/** Center the entire page vertically and horizontally */
+
+@font-face {
+    font-family: 'Akira Expanded Super Bold';
+    src: url('./font/Akira\ Expanded.otf') format('truetype');
+}
+
+
+/* Default styles */
+
+body {
+    background-image: url('./assets/bg/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (max-width: 767px) {
+    body {
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-size: 100% auto;
+    }
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.logo {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.logo,
+.main-image {
+    display: block;
+    /* Fix for logo and image stacking */
+    margin: 0 auto;
+    max-width: 46%;
+    height: auto;
+}
+
+.title {
+    font-size: 48px;
+    color: rgb(255, 255, 255);
+    margin-top: 30px;
+}
+
+.p {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.social-links {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.social-link {
+    margin: 0 10px;
+}
+
+.social-link img {
+    width: 50px;
+    height: 50px;
+}
+
+
+/* Styles for Preloader */
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #c06a31;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 1;
+    /* Initial state */
+    transition: opacity 0.5s ease-in-out;
+    /* Transition */
+}
+
+.preloader img {
+    width: 300px;
+    height: 300px;
+    animation: spin 2s ease-in-out infinite;
+    -webkit-animation: spin 2s ease-in-out infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Center the logo and main image horizontally */
+
+.logo,
+.main-image {
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* Center the "Coming Soon" text */
+
+.title {
+    text-align: center;
+    font-family: 'Akira Expanded', Arial, sans-serif;
+}
+
+
+/* Center the social links */
+
+.social-links {
+    display: flex;
+    justify-content: center;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: -22px;
+}
+
+.whitepaper-button {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #b46114;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+    font-family: 'Akira Expanded', Arial, sans-serif;
+}
+
+.whitepaper-button:hover {
+    background-color: #000;
+    color: #fab753;
+}
